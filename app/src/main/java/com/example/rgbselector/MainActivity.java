@@ -33,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
                 color.addValue(red_value, 'r');
                 output.setBackgroundColor(color.getRGB());
                 output.setText(color.getHex());
+
+                if(color.getHex().compareTo("#888") <= 0) {
+                    output.setTextColor(Color.rgb(255, 255, 255));
+                }
+                else {
+                    output.setTextColor(Color.rgb(0, 0, 0));
+                }
             }
 
             @Override
@@ -53,6 +60,13 @@ public class MainActivity extends AppCompatActivity {
                 color.addValue(green_value, 'g');
                 output.setBackgroundColor(color.getRGB());
                 output.setText(color.getHex());
+
+                if(color.getHex().compareTo("#888") <= 0) {
+                    output.setTextColor(Color.rgb(255, 255, 255));
+                }
+                else {
+                    output.setTextColor(Color.rgb(0, 0, 0));
+                }
             }
 
             @Override
@@ -73,6 +87,13 @@ public class MainActivity extends AppCompatActivity {
                 color.addValue(blue_value, 'b');
                 output.setBackgroundColor(color.getRGB());
                 output.setText(color.getHex());
+
+                if(color.getHex().compareTo("#888") <= 0) {
+                    output.setTextColor(Color.rgb(255, 255, 255));
+                }
+                else {
+                    output.setTextColor(Color.rgb(0, 0, 0));
+                }
             }
 
             @Override
@@ -85,9 +106,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        if(color.getHex().compareTo("#808080") >= 0) {
-            output.setTextColor(Color.rgb(255, 255, 255));
-        }
     }
 }

@@ -5,22 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="@dimen/padding_app">
 
     <TextView
         android:id="@+id/output"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/output"
-        android:textSize="@dimen/textSize"
+        android:textSize="@dimen/text_size"
         android:gravity="center"
+        android:paddingBottom="@dimen/padding_display"
+        android:paddingTop="@dimen/padding_display"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/red"
-        android:textSize="@dimen/textSize"
+        android:textSize="@dimen/text_size"
         android:layout_gravity="center"/>
 
     <SeekBar
@@ -34,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/green"
-        android:textSize="@dimen/textSize"
+        android:textSize="@dimen/text_size"
         android:layout_gravity="center"/>
 
     <SeekBar
@@ -48,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/blue"
-        android:textSize="@dimen/textSize"
+        android:textSize="@dimen/text_size"
         android:layout_gravity="center"/>
 
     <SeekBar

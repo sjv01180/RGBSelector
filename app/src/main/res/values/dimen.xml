@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="textSize">32sp</dimen>
+    <dimen name="text_size">32sp</dimen>
+    <dimen name="padding_app">10dp</dimen>
+    <dimen name="padding_display">150dp</dimen>
 </resources>
