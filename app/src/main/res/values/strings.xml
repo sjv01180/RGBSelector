@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RGBSelector</string>
+    <string name="output">0</string>
+    <string name="red">R</string>
+    <string name="green">G</string>
+    <string name='blue'>B</string>
+</resources>
