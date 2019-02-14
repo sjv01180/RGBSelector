@@ -117,8 +117,17 @@ public class ColorSetter {
         int blue_value = this.getBlue();
 
         String hexRed = Integer.toHexString(red_value);
+        if(hexRed.length() < 2) {
+            hexRed = "0" + hexRed;
+        }
         String hexGreen = Integer.toHexString(green_value);
+        if(hexGreen.length() < 2) {
+            hexGreen = "0" + hexGreen;
+        }
         String hexBlue = Integer.toHexString(blue_value);
+        if(hexBlue.length() < 2) {
+            hexBlue = "0" + hexBlue;
+        }
 
 
         return "#"+ hexRed + hexGreen + hexBlue;
