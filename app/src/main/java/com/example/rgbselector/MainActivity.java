@@ -17,14 +17,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        color = new ColorSetter();
-
         final TextView output = findViewById(R.id.output);
 
         SeekBar red = findViewById(R.id.seek_red);
         SeekBar green = findViewById(R.id.seek_green);
         SeekBar blue = findViewById(R.id.seek_blue);
 
+        color = new ColorSetter(red.getProgress(), green.getProgress(), blue.getProgress());
+        output.setBackgroundColor(color.getRGB());
+        output.setText(color.getHex());
+        output.setTextColor(color.getRGBInverse());
 
         red.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -34,12 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 output.setBackgroundColor(color.getRGB());
                 output.setText(color.getHex());
 
-                if(color.getHex().compareTo("#888") <= 0) {
-                    output.setTextColor(Color.rgb(255, 255, 255));
-                }
-                else {
-                    output.setTextColor(Color.rgb(0, 0, 0));
-                }
+                output.setTextColor(color.getRGBInverse());
             }
 
             @Override
@@ -61,12 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 output.setBackgroundColor(color.getRGB());
                 output.setText(color.getHex());
 
-                if(color.getHex().compareTo("#888") <= 0) {
-                    output.setTextColor(Color.rgb(255, 255, 255));
-                }
-                else {
-                    output.setTextColor(Color.rgb(0, 0, 0));
-                }
+                output.setTextColor(color.getRGBInverse());
             }
 
             @Override
@@ -88,12 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 output.setBackgroundColor(color.getRGB());
                 output.setText(color.getHex());
 
-                if(color.getHex().compareTo("#888") <= 0) {
-                    output.setTextColor(Color.rgb(255, 255, 255));
-                }
-                else {
-                    output.setTextColor(Color.rgb(0, 0, 0));
-                }
+                output.setTextColor(color.getRGBInverse());
             }
 
             @Override
